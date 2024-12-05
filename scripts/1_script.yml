@@ -1,0 +1,12 @@
+---
+- name: Do some Script 1 things
+  hosts: default
+  become: yes
+  
+  tasks:
+    - name: Creating a file with content
+      copy:
+        dest: "/script1.logs"
+        content: |
+          I am script1
+          Nothing to see here...
