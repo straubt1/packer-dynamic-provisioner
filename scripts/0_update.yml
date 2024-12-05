@@ -1,0 +1,9 @@
+---
+- name: Script to Update OS
+  hosts: default
+  become: yes
+  
+  tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
